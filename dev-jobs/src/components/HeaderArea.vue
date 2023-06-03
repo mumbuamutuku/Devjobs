@@ -1,9 +1,11 @@
 <template>
     <header>
         <nav>
+            <router-link :to="{ path: '/' }" style="text-decoration: none;">
             <div class="logo">
                 <img src="/images/logo.svg" alt="" srcset="">
             </div>
+            </router-link>
             <div class="switcher">
                 
                
@@ -43,11 +45,11 @@ export default {
             }
         },
         setThemeNow () {
-            if (localStorage.getItem('theme') === 'theme-dark') {
-                this.setTheme('theme-dark');
+            if (localStorage.getItem('theme') === 'theme-light') {
+                this.setTheme('theme-light');
                 document.getElementById('slider').checked = false;
             } else {
-                this.setTheme('theme-dark');
+                this.setTheme('theme-light');
                 document.getElementById('slider').checked = true;
             }
         }

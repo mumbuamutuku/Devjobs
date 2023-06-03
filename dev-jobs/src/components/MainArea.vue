@@ -29,27 +29,36 @@
     </div>
     <div class="job-section-list-no-list" v-if="filteredList < 1">No Job Found</div>
     <div class="job-section" v-else>
+      <!-- <router-link
+          class="jobs"
+          v-for="job in filterBy"
+          :key="job.id"
+          :to="{ path: 'job/' + job.company + '/' + job.id }"
+        > -->
       <div class="job-section-list" v-for="job in filteredList" :key="job.id">
-        <div class="image-head" :style="{background: job.logoBackground}">
-          <img :src="job.logo" alt="" />
-        </div>
-        <div class="job-section-list--content">
-          <div class="job-section-list--time">
-            <p>{{job.postedAt}}</p>
-            <p
-              class="dot-notation"
-              style="font-size: 20px; padding-right: 10px; padding-left: 12px"
-            >
-              &#x2022;
-            </p>
-            <p>{{job.contract}}</p>
+        <router-link :to="{ path: 'job/' + job.company + '/' + job.id }" style="text-decoration: none;">
+          <div class="image-head" :style="{background: job.logoBackground}">
+            <img :src="job.logo" alt="" />
           </div>
-          <h3>{{job.position}}</h3>
-          <p>{{job.company}}</p>
-        </div>
-        <div style="margin-top: 19px; color: #5964e0">
-          <h4>{{job.location}}</h4>
-        </div>
+          <div class="job-section-list--content">
+            <div class="job-section-list--time">
+              <p>{{job.postedAt}}</p>
+              <p
+                class="dot-notation"
+                style="font-size: 20px; padding-right: 10px; padding-left: 12px"
+              >
+                &#x2022;
+              </p>
+              <p>{{job.contract}}</p>
+            </div>
+            <h3>{{job.position}}</h3>
+            <p>{{job.company}}</p>
+          </div>
+          <div style="margin-top: 19px; color: #5964e0">
+            <h4>{{job.location}}</h4>
+          </div>
+        </router-link>
+        
       </div>
     </div>
   </main>
