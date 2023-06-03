@@ -2,7 +2,7 @@
 .theme-light{
     --background-color-app: #f4f6f8;
     --background-color-elements: #fff;
-    --color-text: #19202d;
+    --color-text: #19202d; 
     --color-checkbox: #e7e8e9;
     --background-color-btn-2: #eeeffc;
     --background-color-btn-2-hover: #c5c9f4;
@@ -45,16 +45,16 @@ main {
 }
 main .search-section{
     width: 80%;
-    height: auto;
+    /* height: 80px; */
     margin: 0 auto;
     background-color: var(--background-color-elements);
     border-radius:5px;
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-    /* justify-content: space-between; */
+    justify-content: space-between;
     position: relative;
-    bottom: 25px;
+    bottom: 27px;
 }
 .search-by-title{
     /* width: 463px; */
@@ -96,30 +96,45 @@ main .search-section{
     height: 50px;
     border: 0px;
     outline: none;
-    width: 240px;
+    /* width: 240px; */
     background-color: var(--background-color-elements);
 }
+
 .search-by-title img, .search-by-location img{
     margin-right: 10px;
+}
+.search-button input {
+    /* -webkit-appearance: none; */
+    /* background-color: #777a92; */
+    height: 1.5em;
+    width: 1.5em;
+    cursor: pointer;
+}
+.search-button input:checked{
+        background: url(../../public/images/icon-check.svg), red;
+        background-repeat: no-repeat;
+        background-position: 50%;
+        border: none;
 }
 main .job-section{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 200px;
-    grid-gap: 20px;
-    column-gap: 20px;
+    /* grid-template-rows: 200px; */
+    grid-row-gap: 60px;
+    grid-column-gap: 20px;
     width: 80%;
-    margin: 0 auto;
+    margin: 50px auto;
     align-items: center;
-    margin: 100px auto 0 auto;
+    /* margin: 0 10% 0 10%; */
+    /* padding-bottom: 5em; */
     padding-bottom: 5em;
     /* justify-items: center; */
 }
 main .job-section > div:nth-child(-n+3){
-    margin-bottom: 60px;
+    /* margin-bottom: 60px; */
 }
 main .job-section > div{
-    background-color: #fff;
+    background-color: var(--background-color-elements);
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -127,6 +142,43 @@ main .job-section > div{
     /* margin-bottom: 60px; */
     border-radius: 5px;
     padding-left: 2em;
+}
+main .job-section .job-section-list .image-head{
+    width: 50px;
+    height: 50px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: -27px;
+}
+main .job-section .job-section-list .job-section-list--content{
+    display:flex; 
+    flex-direction:column;
+    row-gap: 10px;
+}
+.job-section-list--time{
+    display:flex;
+}
+.job-section-list--content div, .job-section-list--content h3, .job-section-list--content p{
+    padding: 0;
+    margin: 0;
+}
+.job-section-list--content p{
+    color: #6e8098
+}
+.job-section-list--content h3{
+    color: var(--color-text);
+}
+.dot-notation{
+    font-size:20px; 
+    padding-right:10px; 
+    padding-left: 10px
+}
+.job-section-list-no-list{
+    text-align: center;
+    color: var(--color-text);
 }
 /* The switch - the box around the slider */
 .switch {
@@ -206,6 +258,7 @@ input:checked + .slider:before {
 .slider.round:before {
     border-radius: 50%;
 }
+
 @media screen and (max-width: 768px){
     header{
         background: url(../../public/images/bg-pattern-header-tablet.svg);
@@ -224,9 +277,9 @@ input:checked + .slider:before {
     main .job-section{
         grid-template-columns: repeat(2, 1fr);
     }
-    main .job-section > div:nth-child(even){
+    /* main .job-section > div:nth-child(even){
         margin-bottom: 0px;
-    }
+    } */
 }
 @media screen and (max-width: 425px){
     header{

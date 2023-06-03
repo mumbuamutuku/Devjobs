@@ -1,14 +1,12 @@
 <template>
-  <HeaderArea/>
+  <router-view></router-view>
 </template>
 
 <script>
-import  HeaderArea from './components/HeaderArea.vue'
+
 export default {
   name: 'App',
-  components: {
-    HeaderArea
-  }
+  
 }
 </script>
 
