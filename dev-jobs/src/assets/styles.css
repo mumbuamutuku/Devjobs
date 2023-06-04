@@ -51,38 +51,27 @@ main {
 }
 main .search-section{
     width: 80%;
-    /* height: 80px; */
+    height: 80px;
     margin: 0 auto;
     background-color: var(--background-color-elements);
     border-radius:5px;
     display: flex;
     align-items: center;
-    flex-wrap: wrap;
     justify-content: space-between;
     position: relative;
     bottom: 27px;
 }
-.search-by-title{
-    /* width: 463px; */
+.search-by-title, .search-by-location, .search-button{
+    height: inherit;
     display: flex;
-    padding-right: 2em;
-    padding-left: 2em;
+    flex:1;
+    padding: 0 1rem;
     border-right: 1px solid rgba(110, 128, 152, 0.2);
-}
-.search-by-location{
-    /* width: 300px; */
-    /* display: flex; */
-    padding-right: 2em;
-    padding-left: 2em;
-    border-right: 1px solid rgba(110, 128, 152, 0.2);
-}
-.search-button{
-    /* width: 350px; */
-    display: flex;
     align-items: center;
-    padding-right: 2em;
-    padding-left: 2em;
+    /* justify-content: center; */
 }
+
+
 button{
     width: 80px;
     height: 40px;
@@ -102,7 +91,9 @@ button{
     height: 50px;
     border: 0px;
     outline: none;
-    /* width: 240px; */
+    width: 90%;
+    text-overflow: ellipsis;
+    padding: 0.5rem 0 0.5rem 0.5rem;
     background-color: var(--background-color-elements);
 }
 
@@ -262,6 +253,7 @@ main .job-section .job-section-list .job-section-list--content{
 }
 .card-text-2, .card-text-3{
     margin: 0 3rem;
+    text-align: justify;
 }
 .card-text-2 ul {
     list-style: none;
@@ -398,18 +390,26 @@ input:checked + .slider:before {
         background: url(../../public/images/bg-pattern-header-tablet.svg);
         background-position: 2% 78%;
     }
-    main .search-section{
-        justify-content: center;
+     main .search-section{
+        width: 90%;
     }
+    /*
     .search-by-title, .search-by-location{
         border-right: 0px;
         border-bottom: 1px solid rgba(110, 128, 152, 0.2);
     }
     .search-button{
         padding-left: 6em;
-    }
+    } */
     main .job-section{
         grid-template-columns: repeat(2, 1fr);
+        width: 90%;
+    }
+    .job-details-banner, .job-details-card{
+        width: 90%;
+    }
+    footer .job-details-footer {
+        width: 95%;
     }
     /* main .job-section > div:nth-child(even){
         margin-bottom: 0px;
@@ -418,6 +418,9 @@ input:checked + .slider:before {
 @media screen and (max-width: 425px){
     header{
         background: url(../../public/images/bg-pattern-header.svg);
+    }
+    header nav{
+        width: 90%;
     }
     .search-by-location, .search-button{
         display: none;
@@ -433,5 +436,53 @@ input:checked + .slider:before {
     }
     .job-details-banner{
         flex-direction: column;
+        width: 90%;
+        padding-bottom: 2rem;
+        text-align: center;
+        /* height; */
     }
+    .job-details-banner button{
+        height: 237px;
+    width: 39%;
+    }
+    .job-details-card{
+        width: 90%;
+    }
+    .job-details-card button{
+        width: 100%;
+    height: 40px;
+    margin-left: 0;
+    margin-top: 15px;
+    }
+    .card-1{
+        flex-direction: column;
+        margin: 0 1rem;
+    }
+    .card-text-2{
+        margin: 0 1rem;
+    }
+    .job-details-card .card-text-1{
+        margin: 3rem 1rem 2rem 1rem;
+    }
+    .banner-img{
+        width: 39px;
+    /* height: 84px; */
+    /* padding: 0.5rem; */
+    border-radius: 7px;
+    position: relative;
+    top: -12px;
+    }
+    .banner-img img{
+        width: 23px;
+    }
+    .job-details-footer div{
+        display: none;
+    }
+    .job-details-footer button{
+        margin-left: 0;
+        width: 100%;
+        height: 50px;
+        margin-top: 22px;
+    }
+
 }
