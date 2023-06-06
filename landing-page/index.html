@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dev Jobs Landing Page</title>
+    <link rel="stylesheet" href="fontawesome-free-6.4.0-web/css/all.css">
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+    <div>
+        <nav>
+          <ul class="menu">
+            <li class="logo"><img src="./images/logo.svg" alt=""></li>
+            <li class="list"><a href="#features">Features</a> </li>
+            <li class="list"><a href="#about">About</a> </li>
+            <li class="toggle" @click="displayMenu"><img src="/images/icon-hamburger.svg" alt=""></li>     
+          </ul>
+        </nav>
+          <!-- <div class="wrapper" v-show="showMenu">
+            <ul class="">
+              <li>Features</li>
+              <li>About</li>
+            </ul>
+          </div> -->
+          <div class="intro-section" v-vue-aos="{animationClass:'fadeIn animated'}">
+            
+            <div class="intro-text">
+              <h1>Job Board for Developer's and Engineers</h1>
+              <p>Do you want to get access to job's across the world? dev-jobs connect you with recruiters and well-paid jobs</p>
+              <button ><a href="https://deves-job.netlify.app" target="_blank">Get Started</a> </button>
+              <button ><a href="https://github.com/mumbuamutuku/Devjobs" target="_blank">View on Github</a> </button>
+            </div>
+            <div class="intro-img" v-show="showMenu == false">
+              <img src="./images/splash-screen.png" alt="" >
+            </div>
+          </div>
+          <div class="display-section" v-vue-aos="{animationClass:'fadeIn animated'}" id="features">
+            <div class="display-img" v-show="showMenu == false">
+                <img src="./images/splash-screen.png" alt="" >
+              </div>
+            
+            <div class="display-img" v-show="showMenu == false">
+              <img src="./images/spash-screen-inner.png" alt="" >
+            </div>
+            
+          </div>
+          <div class="link-section">
+                <!-- <div class="link-input-container">
+                  <div :class="{invalid: errorData}">
+                      <input type="url" :class="{invalid: errorData}" placeholder="Shorten a link here..." v-model="formData.url" @focus="clearError">
+                      <span v-if="errorData">Please add a link</span>
+                  </div>
+                  <button type="submit" @click="getShortLink">Shorten It!</button>
+                </div>
+                <div class="link-list">
+                  <TransitionGroup name="list">
+                  <div class="link-content" v-for="link in shortenedLink" :key="link" >
+                    <p class="long-link">{{link.oldLink}}</p>
+                    <p class="short-link">{{link.shortenedLink}}</p>
+                    <button class="copy" v-if="!link.copied" @click="copiedLink(link.shortenedLink)">Copy</button>
+                    <button v-else class="copied">Copied!</button>
+                  </div>
+                  </TransitionGroup>
+                </div> -->
+                <div class="link-stat">
+                    <div class="link-stat-description">
+                      <h1>Features</h1>
+                      <p>See what you can achieve with our Job Board</p>
+                    </div>
+                </div>
+                <!-- <span class="connector"></span> -->
+            <div class="link-body">
+              <div class="link-items brand">
+                <h2>Job Openings/listing</h2>
+                <p>Provides software developer's access to job openings and opportunities. You will be able to filter jobs on 
+                    the home page by location, title, or whether the job is part-time or not.</p>
+              </div>
+              <div class="link-items detailed">
+                <h2>Detailed Requirements</h2>
+                <p>Gain insights into the job with the ability to click on a job from the home page to read more on the roles and 
+                    responsibilities. You will also be able to apply for the job on the page.</p>
+              </div>
+              <div class="link-items customizable">
+                <h2>Fully Customizable</h2>
+                <p>The light and dark mode makes the application easy to use as you switch to any mode that suits you. That means
+                    you can visit our application without concern for too much ligh reflections.
+                </p>
+              </div>
+            </div>
+            
+            <div class="link-stat" id="about">
+                <div class="link-stat-description">
+                  <h1>About</h1>
+                  <p>This application is our Foundation project for the ALX Software Engineering Course. Below is the list of the contributors to the project.</p>
+                </div>
+            </div>
+            <!-- <span class="connector"></span> -->
+        <div class="link-body" >
+          <div class="about">
+            <h2>Mumbua Mutuku</h2>
+            <p>Mumbua is an ALX SE student, Cohort 9 from Kenya. She wrote all the backend 
+                script that made job creation, update, deletion and display possible.</p>
+            <h4 style="font-weight: bolder;">Backend Developer(Python Flask)</h4>
+            <div class="sm-links">
+                <a href="https://www.linkedin.com/in/mumbuamutuku" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://twitter.com/lilwildkid?t=7L-jUAS-9u2iogVq3sqNuw&s=08" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="https://github.com/mumbuamutuku"><i class="fab fa-github" target="_blank"></i></a>
+            </div>
+            
+          </div>
+          <div class="about">
+            <h2>Oluwakemi Omoyeni</h2>
+            <p>Oluwakemi is an ALX SE student, cohort 9 from Nigeria. She developed the frontend for the application and the landing page 
+                using the APIs provided.</p>
+                <h4 style="font-weight: bolder;">Frontend Developer(Vue.JS)</h4>
+                <div class="sm-links">
+                    <a href="https://www.linkedin.com/in/oluwakemi-omoyeni/"><i class="fab fa-linkedin" target="_blank"></i></a>
+                    <a href="https://twitter.com/cap_keth"><i class="fab fa-twitter" target="_blank"></i></a>
+                    <a href="https://github.com/Captressketh001"><i class="fab fa-github" target="_blank"></i></a>
+                </div>
+          </div>
+          <div class="about">
+            <h2>Miracle Achumba</h2>
+            <p>Miracle is an ALX SE student, cohort 9 from Nigeria. He assisted in developing the frontend for the application and the landing page 
+                using the APIs provided.</p>
+                <h4>Frontend Developer(HTML, CSS, JS)</h4>
+                <div class="sm-links">
+                    <a href="https://www.linkedin.com/in/miracleachumba"><i class="fab fa-linkedin" target="_blank"></i></a>
+                    <a href="https://twitter.com/mimipsalm1"><i class="fab fa-twitter" target="_blank"></i></a>
+                    <a href="https://github.com/Psalmdave"><i class="fab fa-github" target="_blank"></i></a>
+                </div>
+          </div>
+        </div>
+             <div class="call-to-action">
+              <h1>Get access to jobs opening today!</h1>
+              <button><a href="https://deves-job.netlify.app" target="_blank" >Get Started</a> </button>
+              
+            </div>
+              <Footer/>
+          </div>
+        </div>
+        <script src="jquery.js"></script>
+</body>
+</html>
