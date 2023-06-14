@@ -1,4 +1,5 @@
 <template>
+    <!-- Job details banner -->
     <div class="job-details-banner">
         <div class="banner-img" :style="{background: job.logoBackground}">
             <img :src="job.logo" alt="">
@@ -43,6 +44,7 @@
             </ul>
         </div>
     </div>
+    <!-- Job details footer -->
     <footer>
         <div class="job-details-footer">
             <div>
@@ -69,10 +71,8 @@ export default {
     },
     
     created(){
-        console.log(this.id, 'id')
+        // filtering the lists of jobs with the id params from the route
         this.job = this.jobs.find((x) => x.id == this.id);
-        console.log(this.job)
-        console.log(this.job.logo)
     }
     
 }

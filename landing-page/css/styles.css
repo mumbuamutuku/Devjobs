@@ -22,7 +22,6 @@ nav ul{
     flex-wrap: wrap;
 }
 .menu li.logo{
-    /* padding-right: 20px; */
     flex: 1;
 }
 .menu li.list{
@@ -74,10 +73,8 @@ nav ul li.resources{
         width: 80%;
         background-color: hsl(257, 27%, 26%);
         margin: 0 auto;
-        /* justify-content: center; */
         border-radius: 5px;
         flex-direction: column;
-        /* flex-wrap: wrap; */
         height: 325px;
         padding: 23px;
     }
@@ -85,7 +82,6 @@ nav ul li.resources{
         list-style: none;
     }
     .wrapper ul li{
-        /* padding: 25px 92px; */
         color: #fff;
         font-weight: 900;
         padding: 15px 10px;
@@ -104,9 +100,6 @@ nav ul li.resources{
     display: flex;
     height: 600px;
     width: 90%;
-    /* margin-left: auto; */
-   
-    /* align-items: center; */
     margin: 0 auto;
 }
 .intro-img{
@@ -116,7 +109,6 @@ nav ul li.resources{
 .intro-img img{
     width: 100%;
     height: auto;
-    /* left: 80px; */
     position: absolute;
     top: 100px;
 }
@@ -124,9 +116,6 @@ nav ul li.resources{
     display: flex;
     height: 600px;
     width: 90%;
-    /* margin-left: auto; */
-   
-    /* align-items: center; */
     margin: 0 auto;
 }
 .display-img{
@@ -136,7 +125,6 @@ nav ul li.resources{
 .display-img img{
     width: 100%;
     height: auto;
-    /* left: 80px; */
     position: absolute;
     top: 100px;
 }
@@ -167,32 +155,6 @@ nav ul li.resources{
     text-decoration: none;
     color: #fff;
 }
-/*
-
-.intro-text h1{
-    font-size: 4.5rem;
-  line-height: 80px;
-  font-weight: 700;
-  color: hsl(255, 11%, 22%);
-}
-.intro-text p{
-    font-size: 18px;
-  width: 90%;
-  line-height: 28px;
-  margin-bottom: 25px;
-  letter-spacing: 1px;
-  color: hsl(257, 7%, 63%);
-}
-
-
-.intro-img img{
-  position: absolute;
-  top: 0;
-  left: 80px;
-  height: auto;
-  width: 100%;
-}
-*/
 @media screen and (max-width: 768px){
     .intro-section{
         flex-direction: column;
@@ -204,8 +166,6 @@ nav ul li.resources{
         width: 100%;
     }
     .intro-img img{
-        /* width: 422px; */
-        /* left: 50px; */
         position: relative;
     }
     .display-section{
@@ -219,8 +179,6 @@ nav ul li.resources{
         width: 90%;
     }
     .display-img img{
-        /* width: 422px; */
-        /* left: 50px; */
         position: relative;
     }
     .intro-text{
@@ -255,7 +213,6 @@ nav ul li.resources{
     align-items: center;
     position: relative;
     top: -60px;
-    /* flex-direction: column; */
 }
 .link-input-container div{
     display: flex;
@@ -414,7 +371,6 @@ nav ul li.resources{
     background: hsl(220, 16%, 96%);
     height: 800px;
     display: flex;
-    /* flex-wrap: wrap; */
     justify-content: center;
     align-items: center;
     width: 100%;
@@ -445,7 +401,6 @@ nav ul li.resources{
 }
 .about{
     padding: 20px 35px 20px;
-    /* background: #fff; */
     border-radius: 5px;
     height: auto;
     text-align: justify;
@@ -469,17 +424,6 @@ nav ul li.resources{
     margin: 60px auto;
     z-index: 1;
 }
-/* .link-body::before{
-    content: "";
-    position: absolute;
-    height: 7px;
-    width: 700px;
-    background: #5964e0;
-    transform: translateX(-50%);
-    z-index: -1;
-    right: -197px;
-    top: 36%;
-} */
 .link-header {
     text-align: center;
 }
@@ -518,17 +462,6 @@ nav ul li.resources{
     .link-body{
         height: auto;
     }
-    /* .link-body::before {
-        content: "";
-        position: absolute;
-        height: 7px;
-        width: 700px;
-        background: #2acfcf;
-        transform: translateX(-50%);
-        z-index: -1;
-        right: 296px;
-        top: 36%;
-    } */
 }
 @media screen and (max-width:1200px){
     .link-body{
@@ -567,15 +500,6 @@ nav ul li.resources{
     .brand::before, .detailed::before, .customizable::before{
         left: 44%
     }
-    /* .link-body::before{
-        width: 2%;
-        height: 500px;
-        width: 7px;
-        left: 50%;
-        transform: translateX(-50%);
-        top: 100px;
-        z-index: -1;
-    } */
    
 }
 @media screen and (max-width:425px){
@@ -654,7 +578,6 @@ nav ul li.resources{
 }
 .call-to-action button:hover, .link-input-container button:hover, .menu li a.button:hover, .link-content button.copy:hover{
     background: hsl(180, 87%, 65%);
-    /* hsl(180, 87%, 65%) */
 }
 
 @media screen and (max-width:767px) {

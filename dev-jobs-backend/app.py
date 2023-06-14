@@ -1,3 +1,6 @@
+"""
+Database Class Design
+"""
 from flask import Flask, jsonify, render_template, request
 from flask_sqlalchemy import SQLAlchemy
 
@@ -14,6 +17,8 @@ db = SQLAlchemy(app)
 
 
 class Job(db.Model):
+    """Job model
+    """
     id = db.Column(db.Integer, primary_key=True)
     company = db.Column(db.String(100))
     logo = db.Column(db.String(100))
@@ -46,11 +51,13 @@ class Job(db.Model):
 
 @app.route("/")
 def home():
+    #home route
     return render_template('index.html')
 
 
 @app.route('/jobs', methods=['GET'])
 def get_jobs():
+    # Get all jobs
     try:
         jobs = Job.query.all()
         job_list = []
@@ -80,6 +87,7 @@ def get_jobs():
 
 @app.route('/jobs', methods=['POST'])
 def create_job():
+    # create jobs
     try:
         data = request.json
         job = Job(
@@ -105,6 +113,7 @@ def create_job():
 
 @app.route('/jobs/<int:jobId>', methods=['GET'])
 def get_job_details(jobId):
+    # Get job details
     try:
         job = Job.query.get(jobId)
         if job:
@@ -133,6 +142,7 @@ def get_job_details(jobId):
 
 @app.route('/jobs/search', methods=['GET'])
 def search_jobs():
+    # Search jobs
     try:
         title = request.args.get('title')
         location = request.args.get('location')

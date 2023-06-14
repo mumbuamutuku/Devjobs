@@ -14,17 +14,10 @@
           <ul class="menu">
             <li class="logo"><img src="./images/logo.svg" alt=""></li>
             <li class="list"><a href="#features">Features</a> </li>
-            <li class="list"><a href="#about">About</a> </li>
-            <li class="toggle" @click="displayMenu"><img src="/images/icon-hamburger.svg" alt=""></li>     
+            <li class="list"><a href="#about">About</a> </li>     
           </ul>
         </nav>
-          <!-- <div class="wrapper" v-show="showMenu">
-            <ul class="">
-              <li>Features</li>
-              <li>About</li>
-            </ul>
-          </div> -->
-          <div class="intro-section" v-vue-aos="{animationClass:'fadeIn animated'}">
+          <div class="intro-section">
             
             <div class="intro-text">
               <h1>Job Board for Developer's and Engineers</h1>
@@ -32,12 +25,12 @@
               <button ><a href="https://deves-job.netlify.app" target="_blank">Get Started</a> </button>
               <button ><a href="https://github.com/mumbuamutuku/Devjobs" target="_blank">View on Github</a> </button>
             </div>
-            <div class="intro-img" v-show="showMenu == false">
+            <div class="intro-img">
               <img src="./images/splash-screen.png" alt="" >
             </div>
           </div>
-          <div class="display-section" v-vue-aos="{animationClass:'fadeIn animated'}" id="features">
-            <div class="display-img" v-show="showMenu == false">
+          <div class="display-section" id="features">
+            <div class="display-img">
                 <img src="./images/splash-screen.png" alt="" >
               </div>
             
@@ -47,30 +40,12 @@
             
           </div>
           <div class="link-section">
-                <!-- <div class="link-input-container">
-                  <div :class="{invalid: errorData}">
-                      <input type="url" :class="{invalid: errorData}" placeholder="Shorten a link here..." v-model="formData.url" @focus="clearError">
-                      <span v-if="errorData">Please add a link</span>
-                  </div>
-                  <button type="submit" @click="getShortLink">Shorten It!</button>
-                </div>
-                <div class="link-list">
-                  <TransitionGroup name="list">
-                  <div class="link-content" v-for="link in shortenedLink" :key="link" >
-                    <p class="long-link">{{link.oldLink}}</p>
-                    <p class="short-link">{{link.shortenedLink}}</p>
-                    <button class="copy" v-if="!link.copied" @click="copiedLink(link.shortenedLink)">Copy</button>
-                    <button v-else class="copied">Copied!</button>
-                  </div>
-                  </TransitionGroup>
-                </div> -->
                 <div class="link-stat">
                     <div class="link-stat-description">
                       <h1>Features</h1>
                       <p>See what you can achieve with our Job Board</p>
                     </div>
                 </div>
-                <!-- <span class="connector"></span> -->
             <div class="link-body">
               <div class="link-items brand">
                 <h2>Job Openings/listing</h2>
@@ -96,7 +71,6 @@
                   <p>This application is our Foundation project for the ALX Software Engineering Course. Below is the list of the contributors to the project.</p>
                 </div>
             </div>
-            <!-- <span class="connector"></span> -->
         <div class="link-body" >
           <div class="about">
             <h2>Mumbua Mutuku</h2>

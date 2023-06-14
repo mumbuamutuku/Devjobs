@@ -1,14 +1,14 @@
 <template>
     <header>
         <nav>
+            <!-- Route to home page -->
             <router-link :to="{ path: '/' }" style="text-decoration: none;">
             <div class="logo">
                 <img src="/images/logo.svg" alt="" srcset="">
             </div>
             </router-link>
+            <!-- Theme switcher section -->
             <div class="switcher">
-                
-               
                 <label id="switch" class="switch">
                    <img src="/images/icon-sun.svg" alt="" style="margin-left: -11px;">
                     <input type="checkbox" @change="toggleTheme" id="slider">
@@ -32,10 +32,12 @@ export default {
         }
     },
     methods:{
+        // store theme in local storage
         setTheme(themeName) {
-        localStorage.setItem('theme', themeName);
-        document.documentElement.className = themeName;
+            localStorage.setItem('theme', themeName);
+            document.documentElement.className = themeName;
         },
+        // Theme toggling
         toggleTheme() {
             if (localStorage.getItem('theme') === 'theme-dark') {
                 this.setTheme('theme-light');
@@ -44,6 +46,7 @@ export default {
                 this.setTheme('theme-dark');
             }
         },
+        // setting themes
         setThemeNow () {
             if (localStorage.getItem('theme') === 'theme-light') {
                 this.setTheme('theme-light');

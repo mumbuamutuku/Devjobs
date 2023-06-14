@@ -1,5 +1,6 @@
 <template>
   <main>
+    <!-- Search Section -->
     <div class="search-section">
       <div class="search-by-title">
         <img src="/images/icon-search.svg" alt=""/>
@@ -27,14 +28,9 @@
         <button>Search</button>
       </div>
     </div>
+    <!-- Display not found if no job is found -->
     <div class="job-section-list-no-list" v-if="filteredList < 1">No Job Found</div>
     <div class="job-section" v-else>
-      <!-- <router-link
-          class="jobs"
-          v-for="job in filterBy"
-          :key="job.id"
-          :to="{ path: 'job/' + job.company + '/' + job.id }"
-        > -->
       <div class="job-section-list" v-for="job in filteredList" :key="job.id">
         <router-link :to="{ path: 'job/' + job.company + '/' + job.id }" style="text-decoration: none;">
           <div class="image-head" :style="{background: job.logoBackground}">
@@ -80,17 +76,7 @@ export default {
     };
   },
   methods: {
-    // this.filter = this.jobs.filter(job => {
-    //         if (this.search == '' && this.location == '' && !this.isChecked) {
-    //             return this.jobs
-    //         }
-    //         if (job.position.toLowerCase().includes(this.search.toLowerCase())){
-    //             return job.position.toLowerCase().includes(this.search.toLowerCase())
-    //         }
-    //         // if (job.location.toLowerCase().includes(this.location.toLowerCase())){
-    //         //     return job.location.toLowerCase().includes(this.location.toLowerCase())
-    //         // }
-    //     })
+  
   },
   computed:{
     filteredList() {
@@ -107,9 +93,6 @@ export default {
     },
   },
   mounted() {
-    console.log(this.jobs);
-    console.log(this.isChecked)
-    // this.filteredList()
   },
 };
 </script>
