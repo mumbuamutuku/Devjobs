@@ -36,9 +36,6 @@ Users should be able to:
 - GitHub URL: [https://github.com/mumbuamutuku/Devjobs](https://github.com/mumbuamutuku/Devjobs)
 - Live Site URL: [https://deves-jobs.netlify.app](https://deves-jobs.netlify.app)
 - Landing Page URL: [https://deves-landing.netlify.app](https://deves-landing.netlify.app)
-- Frontend Code: ![](/dev-jobs/)
-- Backend Code: ![](/dev-jobs-backend/)
-- Landing Page: ![](/landing-page/)
 
 ## Our process
 
